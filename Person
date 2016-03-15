@@ -1,0 +1,44 @@
+namespace Person
+{
+    using System;
+   
+    public class MainClass
+    {
+        public enum Sex 
+        { 
+            Female, 
+            Male 
+        }
+
+        public static void Main()
+        {
+        }
+
+        public static Person Create(int magicNumber)
+        {
+            Person newPerson = new Person();
+            newPerson.Age = magicNumber;
+            if (magicNumber % 2 == 0)
+            {
+                newPerson.Name = "Bad Guy";
+                newPerson.Sex = Sex.Female;
+            }
+            else
+            {
+                newPerson.Name = "Hot Chick";
+                newPerson.Sex = Sex.Male;
+            }
+
+            return newPerson;
+        }
+
+        public class Person
+        {
+            public Sex Sex { get; set; }
+
+            public string Name { get; set; }
+
+            public int Age { get; set; }
+        }
+    }
+}
