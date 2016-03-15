@@ -1,0 +1,24 @@
+namespace BoolExtenstion
+{
+    using System;
+
+    public class BoolExtenstion
+    {
+        private const int MaxCount = 6;
+
+        public class Methods
+        {
+            public static void Main()
+            {
+                BoolExtenstion.Methods instance = new BoolExtenstion.Methods();
+                instance.PrintBoolAsString(true);
+            }
+
+            public void PrintBoolAsString(bool currentBool)
+            {
+                string currentBoolAsString = currentBool.ToString();
+                Console.WriteLine(currentBoolAsString);
+            }
+        }  
+    }
+}
